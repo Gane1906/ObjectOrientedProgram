@@ -1,0 +1,18 @@
+[
+  {
+    "StockName": "Amazon",
+    "NumOfShares": 250,
+    "PricePerShare": 100
+  },
+  {
+    "StockName": "Apple",
+    "NumOfShares": 300,
+    "PricePerShare": 150
+  },
+  {
+    "StockName": "Aitrel",
+    "NumOfShares": 200,
+    "PricePerShare": 200
+  }
+
+]

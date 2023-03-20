@@ -1,5 +1,6 @@
 ﻿using objectOrientedProgram.InventoryDataManagementProblem;
 using objectOrientedProgram.InventorymanagementProblem;
+using objectOrientedProgram.StockManagementProblem;
 using System;
 namespace ObjectOrientedProgram
 {
@@ -11,7 +12,7 @@ namespace ObjectOrientedProgram
             bool flag = true;
             while (flag)
             {
-                Console.Write("1.Inventory Data\n2.Inventory data management\n3.Add Inventory\n4.Edit Inventory\n5.Delete inventory data\n6.Exit\nEnter your option: ");
+                Console.Write("1.Inventory Data\n2.Inventory data management\n3.Add Inventory\n4.Edit Inventory\n5.Delete inventory data\n6.Stock Account\n7.Exit\nEnter your option: ");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -32,6 +33,10 @@ namespace ObjectOrientedProgram
                         inventoryDataManagement.DeleteInventory(@"E:\Users\Ganesh\Documents\BL Excercise\objectOrientedProgram\InventorymanagementProblem\InventoryDetails.json");
                         break;
                     case 6:
+                        StockManagement stockManagement = new StockManagement();
+                        stockManagement.ReadStocJson(@"E:\Users\Ganesh\Documents\BL Excercise\ObjectOrientedProgram\StockManagementProblem\Stock.json");
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
