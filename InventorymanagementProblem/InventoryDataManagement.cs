@@ -121,5 +121,48 @@ namespace objectOrientedProgram.InventorymanagementProblem
             display(wheatList);
             display(pulsesList);
         }
+        public void DeleteInventory(String filePath)
+        {
+            var data = File.ReadAllText(filePath);
+            var result = JsonConvert.DeserializeObject<InventoryList>(data);
+            riceList = result.RiceList;
+            wheatList = result.WheatList;
+            pulsesList = result.PulsesList;
+            Console.WriteLine("Enter the name of list to be deleted");
+            String name = Console.ReadLine();
+            if (name.Equals("rice"))
+            {
+                Console.WriteLine("Enter name of inventory to be deleted");
+                String riceName = Console.ReadLine();
+                foreach (var ele in  riceList.ToList())
+                {
+                    if (ele.Name.Equals(riceName))
+                        riceList.Remove(ele);
+                }
+            }
+            if (name.Equals("wheat"))
+            {
+                Console.WriteLine("Enter name of inventory to be deleted");
+                String wheatName = Console.ReadLine();
+                foreach (var ele in wheatList.ToList())
+                {
+                    if (ele.Name.Equals(wheatName))
+                        wheatList.Remove(ele);
+                }
+            }
+            if (name.Equals("pulses"))
+            {
+                Console.WriteLine("Enter name of inventory to be deleted");
+                String pulsesName = Console.ReadLine();
+                foreach (var ele in pulsesList.ToList())
+                {
+                    if (ele.Name.Equals(pulsesName))
+                        pulsesList.Remove(ele);
+                }
+            }
+            display(riceList);
+            display(wheatList);
+            display(pulsesList);
+        }
     }
 }

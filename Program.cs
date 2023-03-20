@@ -11,7 +11,7 @@ namespace ObjectOrientedProgram
             bool flag = true;
             while (flag)
             {
-                Console.Write("1.Inventory Data\n2.Inventory data management\n3.Add Inventory\n4.Edit Inventory\n5.Exit\nEnter your option: ");
+                Console.Write("1.Inventory Data\n2.Inventory data management\n3.Add Inventory\n4.Edit Inventory\n5.Delete inventory data\n6.Exit\nEnter your option: ");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -29,6 +29,9 @@ namespace ObjectOrientedProgram
                         inventoryDataManagement.EditInventory(@"E:\Users\Ganesh\Documents\BL Excercise\objectOrientedProgram\InventorymanagementProblem\InventoryDetails.json");
                         break;
                     case 5:
+                        inventoryDataManagement.DeleteInventory(@"E:\Users\Ganesh\Documents\BL Excercise\objectOrientedProgram\InventorymanagementProblem\InventoryDetails.json");
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
